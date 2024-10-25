@@ -1,11 +1,13 @@
 <?php
-$host = 'localhost';
-$db = 'todo_app';
-$user = 'root'; // Change this to your database username
-$pass = ''; // Change this to your database password
+$host = 'localhost'; // Database host
+$user = 'your_username'; // Database username
+$password = 'your_password'; // Database password
+$dbname = 'todo_app'; // Database name
 
-$conn = new mysqli($host, $user, $pass, $db);
+// Create connection
+$conn = new mysqli($host, $user, $password, $dbname);
 
+// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
